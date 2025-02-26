@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button";
 
-export default function Home() {
-  return (
+const Home = () => (
     <div className="flex justify-center align-center">
       <Button>
         WTF
       </Button>
     </div>
-  );
-}
+)
+
+export default Home;
