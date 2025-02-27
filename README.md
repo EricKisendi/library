@@ -43,3 +43,5 @@ installation :
 npx shadcn@canary init
 ```
 - The canary option is well suited for Reaction version 19.0 and Tailwindcss version 4 and the rest is just installation of the Ui components.
+
+- For the theme in global.css, remember to put a semi colon after each description of the colors.
