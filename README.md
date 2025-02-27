@@ -44,4 +44,8 @@ npx shadcn@canary init
 ```
 - The canary option is well suited for Reaction version 19.0 and Tailwindcss version 4 and the rest is just installation of the Ui components.
 
-- For the theme in global.css, remember to put a semi colon after each description of the colors.
+- For the theme in global.css, remember to put a semi colon after each description of the colors. Visit [https://tailwindcss.com/docs/theme#theme-variable-namespaces] for the theme-variables names that you will use to make the custom themes. Use {@theme{}}
+
+- The [!important] handle is not handled very well in tailwind v4,,, you can use [!(input your content here)]
+
+- 
