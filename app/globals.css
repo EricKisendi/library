@@ -60,7 +60,6 @@
 /* @config '../tailwind.config.ts'; */
 
 :root {
-  --radius: 0.5rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.15 0.05 262.4);
   --card: oklch(1 0 0);
