@@ -1,11 +1,12 @@
+import BookList from "@/components/BookList";
+import BookOverview from "@/components/BookOverview";
 import { Button } from "@/components/ui/button";
 
 const Home = () => (
-    <div>
-      <Button >
-        What The F*ck
-      </Button>
-    </div>
+  <>
+    <BookOverview />
+    <BookList />
+  </>
 )
 
 export default Home;
