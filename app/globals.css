@@ -1,6 +1,8 @@
 /* Ensure Tailwind CSS is properly installed and configured */
 
 @plugin "tailwindcss-animate";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
 
 @custom-variant dark (&:is(.dark *));
 @import 'tailwindcss';
@@ -8,7 +10,10 @@
 @theme {
   --breakpoint-xs: 480px;
   --font-ibm-plx-sans: IBM Plex Sans, sans-serif;
-  --font-bebas-neue: var(--bebas-neue);
+  /* --font-bebas-neue: var(--bebas-neue); */
+  --font-bebas-neue: Bebas Neue, sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+  --font-sofia: "Sofia", cursive;
   --color-background: oklch(var(--background));
   --color-foreground: oklch(var(--foreground));
   --color-card: oklch(var(--card));
