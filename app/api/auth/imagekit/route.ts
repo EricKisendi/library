@@ -1,5 +1,6 @@
-import config from '@/lib/config';
 import ImageKit from 'imagekit';
+import { NextResponse } from 'next/server';
+import config from '@/lib/config';
 
 const { 
     env: {
@@ -7,7 +8,7 @@ const {
     },
 } = config;
 
-const imagekit = new ImageKit(opts: {
+const imagekit = new ImageKit({
     publicKey,
     privateKey,
     urlEndpoint,
