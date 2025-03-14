@@ -48,4 +48,24 @@ npx shadcn@canary init
 
 - The [!important] handle is not handled very well in tailwind v4,,, you can use [!(input your content here)]
 
-- 
+### Authenticatipon
+- For the authentication functionality, we use Authjs the steps of installation are followed from the Authjs installation documentation for Nextjs.
+- At the end, for the providers, we use CredentialProviders for our emails and password.
+
+## Drizzle
+- Drizzle is a tools that is used to perform various functions. The two main functions is the proces of migration using drizzle-kit and as an ORM for our DataBase.
+
+```bash
+npx drizzle-kit generate
+```
+-This code is used to generate an SQL file for our database
+
+```bash
+npx drizzle-kit migrate
+```
+- And this command runs the migrations that updates our schema
+
+```bash
+npx drizzle-kit studio
+```
+- Finally, this command open the drizzle interface where you can view the database and even make modifications where necessary.
