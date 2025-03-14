@@ -18,14 +18,13 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form"
-import { ZodType, z } from "zod"
 
 import { Button } from "@/components/ui/button"
-import Image from "next/image"
 import ImageUpload from "./ImageUpload"
 import { Input } from "@/components/ui/input"
 import Link from "next/link"
 import React from 'react'
+import { ZodType } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 
 interface Props<T extends FieldValues> {
@@ -44,8 +43,8 @@ const AuthForm = <T extends FieldValues>({
 
   const isSignIn = type === 'SIGN_IN'
 
-   // 1. Define your form.
-   const form: UseFormReturn<T> = useForm({
+  // 1. Define your form.
+  const form: UseFormReturn<T> = useForm({
     resolver: zodResolver(schema),
     defaultValues: defaultValues as DefaultValues<T>,
   });
