@@ -25,6 +25,8 @@ import { Input } from "@/components/ui/input"
 import Link from "next/link"
 import React from 'react'
 import { ZodType } from "zod"
+import { toast } from "sonner"
+import { useRouter } from "next/navigation"
 import { zodResolver } from "@hookform/resolvers/zod"
 
 interface Props<T extends FieldValues> {
@@ -41,6 +43,8 @@ const AuthForm = <T extends FieldValues>({
   onSubmit
 }: Props<T>) => {
 
+  const router = useRouter()
+
   const isSignIn = type === 'SIGN_IN'
 
   // 1. Define your form.
@@ -49,7 +53,26 @@ const AuthForm = <T extends FieldValues>({
     defaultValues: defaultValues as DefaultValues<T>,
   });
 
-  const handleSubmit: SubmitHandler<T>= async (data) => {}
+  const handleSubmit: SubmitHandler<T>= async (data) => {
+    const result = await onSubmit(data);
+
+    if (result.success) {
+      toast({
+        title: "Success",
+        description: isSignIn
+          ? "You have successfully signed in!"
+          : "You have successfully created an account!"
+      });
+
+      router.push('/')
+    } else {
+      toast({
+        title: `Error ${isSignIn ? "signing in" : "creating account"}`,
+        description: result.error || "An error occurred. Please try again",
+        variant: "destructive"
+      })
+    }
+  }
 
   return (
     <div className="flex flex-col gap-4">
