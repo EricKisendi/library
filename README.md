@@ -69,3 +69,15 @@ npx drizzle-kit migrate
 npx drizzle-kit studio
 ```
 - Finally, this command open the drizzle interface where you can view the database and even make modifications where necessary.
+
+### Upstash Redis
+
+- Upstash Redis is a serverless database more like Neon Postgres, its main functionalities is rate-limiting which prevents website from attacks of Denial of Service (DDoS) attacks and caching data.
+- Step followed in the setup is jus logging in in the official website,,, copy the Redis_URL and TOKEN and put them in the env.local file and implement them in the /lib/config file 
+- Rate-limiting setup is followed through the documentation in Upstash
+- Changes have been made in the auth file in the actions folder , this is to implement the functionality of rate-limiting. The rate-limiting is that the IP address of a user is captured and monitoring the activity to avoid repetitive logging in of the user in the app.
+
+## Upstash Workflows
+
+- We also implement the use of workflows. Just like how Netflix implements workflows and sends users notifications to pay subscriptions on time.
+- I have created aan onboarding workflow for new and returning users in the api folder. More on the setup is in the examples folders in the upstash documentation.
