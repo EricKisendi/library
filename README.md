@@ -81,3 +81,7 @@ npx drizzle-kit studio
 
 - We also implement the use of workflows. Just like how Netflix implements workflows and sends users notifications to pay subscriptions on time.
 - I have created aan onboarding workflow for new and returning users in the api folder. More on the setup is in the examples folders in the upstash documentation.
+
+## Vercel
+- Deployment is done via vercel where the repository being made public in github, is imported and the environment variables are configured and the project is deployed.
+- An additional environment variable is added (NEXT_PUBLIC_PROD_API_ENDPOINT)
