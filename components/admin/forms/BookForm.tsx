@@ -12,6 +12,7 @@ import {
 import { ZodType, z } from "zod"
 
 import { Button } from "@/components/ui/button"
+import FileUpload from "@/components/FileUpload"
 import { Input } from "@/components/ui/input"
 import Link from "next/link"
 import React from 'react'
@@ -170,7 +171,15 @@ const BookForm = ({
                   Book Image
                 </FormLabel>
                 <FormControl>
-                    {/*File upload components */}
+                    <FileUpload
+                      type="image"
+                      accept="image/*"
+                      placeholder="Upload your book cover"
+                      folder='books/covers'
+                      variant="light"
+                      onFileChange={field.onChange}
+                      value={field.value}
+                    />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -220,7 +229,15 @@ const BookForm = ({
                   Book Trailer
                 </FormLabel>
                 <FormControl>
-                    {/*File upload components */}
+                  <FileUpload
+                      type="video"
+                      accept="video/*"
+                      placeholder="Upload a trailer"
+                      folder='books/videos'
+                      variant="light"
+                      onFileChange={field.onChange}
+                      value={field.value}
+                    />
                 </FormControl>
                 <FormMessage />
               </FormItem>
