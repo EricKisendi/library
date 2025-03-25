@@ -85,3 +85,7 @@ npx drizzle-kit studio
 ## Vercel
 - Deployment is done via vercel where the repository being made public in github, is imported and the environment variables are configured and the project is deployed.
 - An additional environment variable is added (NEXT_PUBLIC_PROD_API_ENDPOINT)
+
+## Imagekit
+
+## React-colorful

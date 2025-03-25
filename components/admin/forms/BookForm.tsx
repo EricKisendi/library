@@ -12,6 +12,7 @@ import {
 import { ZodType, z } from "zod"
 
 import { Button } from "@/components/ui/button"
+import ColorPicker from "../ColorPicker"
 import FileUpload from "@/components/FileUpload"
 import { Input } from "@/components/ui/input"
 import Link from "next/link"
@@ -53,7 +54,9 @@ const BookForm = ({
     } ,
   });
 
-  const onSubmit = async (values: z.infer<typeof bookSchema>) => {}
+  const onSubmit = async (values: z.infer<typeof bookSchema>) => {
+    console.log(values)
+  }
 
   return (
       <Form {...form}>
@@ -194,7 +197,10 @@ const BookForm = ({
                   Primary Color
                 </FormLabel>
                 <FormControl>
-                    {/*Color picker */}
+                    <ColorPicker
+                      onPickerChange={field.onChange}
+                      value={field.value}
+                    />
                 </FormControl>
                 <FormMessage />
               </FormItem>
